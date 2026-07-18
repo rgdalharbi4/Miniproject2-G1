@@ -38,12 +38,6 @@ The notebook follows the required structure:
 7. Bonus: comparison with Logistic Regression
 8. Key Insight
 
-## How to Run
-
-1. Open `cl_GB_XGBoost_Mini_Project.ipynb` in [Google Colab](https://colab.research.google.com) (File → Upload notebook).
-2. Run all cells top to bottom (`Runtime → Run all`). The dataset is pulled directly from Kaggle via
-   `kagglehub` — no manual download needed.
-3. All models use `random_state=42`, so results should closely match the numbers reported below.
 
 ## Data Preprocessing Summary
 
