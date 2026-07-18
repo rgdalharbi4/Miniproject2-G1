@@ -5,8 +5,8 @@
 
 - Raghad Alharbi
 - Maram Alzahrani
-- Turki
-- Mohammed
+- Turki Abuhaimed
+- Mohammed Alshatri
 
 ## Overview
 
@@ -15,7 +15,7 @@ problem: predicting whether a patient has **cardiovascular disease** (`cardio` =
 clinical and lifestyle measurements (age, blood pressure, cholesterol, glucose, and habits such as
 smoking, alcohol use, and physical activity).
 
-As a bonus, we benchmark XGBoost against a **Logistic Regression** baseline to evaluate whether the
+we benchmark XGBoost against a **Logistic Regression** baseline to evaluate whether the
 added model complexity is actually justified on this dataset.
 
 ## Dataset
@@ -28,18 +28,6 @@ added model complexity is actually justified on this dataset.
   - *Examination:* systolic/diastolic blood pressure (`ap_hi`/`ap_lo`), cholesterol, glucose
   - *Subjective/lifestyle:* smoking, alcohol intake, physical activity
 
-We initially evaluated a smaller Kaggle "Heart Disease Prediction" dataset (270 rows), but moved to this
-larger dataset after finding that a small sample size didn't give a boosting algorithm enough data to
-show a real advantage over a simpler linear model.
-
-## Project Structure
-
-```
-├── cl_GB_XGBoost_Mini_Project.ipynb        # Main notebook (EDA, preprocessing, training, evaluation)
-├── Cardio_XGBoost_Presentation.pptx        # Slide deck for the presentation
-└── README_Cardio_XGBoost_Project.md        # This file
-```
-
 The notebook follows the required structure:
 1. Introduction
 2. Algorithm Explanation (Gradient Boosting / XGBoost)
@@ -48,7 +36,7 @@ The notebook follows the required structure:
 5. Model Training
 6. Model Evaluation
 7. Bonus: comparison with Logistic Regression
-8. Conclusion
+8. Key Insight
 
 ## How to Run
 
@@ -84,7 +72,7 @@ No categorical encoding was needed — all features were already numeric, includ
 | Recall | 68.5% |
 | F1 Score | 71.5% |
 
-**Bonus comparison — XGBoost vs. Logistic Regression:**
+**comparison — XGBoost vs. Logistic Regression:**
 
 | Model | Accuracy | Precision | Recall | F1 Score |
 |---|---|---|---|---|
@@ -103,10 +91,3 @@ non-linear patterns without overfitting.
 - Lifestyle habits (smoking, alcohol, activity) showed weak correlation with the target in this dataset.
 - The model's precision is higher than its recall, meaning it misses more true disease cases than it
   falsely flags — a meaningful limitation in a medical screening context.
-
-## Next Steps
-
-- Hyperparameter tuning (GridSearchCV / Optuna) — the current model uses XGBoost's default settings
-- Adjusting the classification threshold or class weights to reduce false negatives
-- Feature engineering (e.g. BMI, pulse pressure = `ap_hi` − `ap_lo`)
-- Trying `LightGBM` for comparison at this dataset size
