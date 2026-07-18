@@ -1,13 +1,6 @@
 # Mini Project: Classification Algorithms Exploration
 ### Algorithm: Gradient Boosting / XGBoost
 
-## Team
-
-- Raghad Alharbi
-- Maram Alzahrani
-- Turki Abuhaimed
-- Mohammed Alshatri
-
 ## Overview
 
 This project explores **Gradient Boosting / XGBoost** applied to a real-world binary classification
@@ -85,3 +78,10 @@ non-linear patterns without overfitting.
 - Lifestyle habits (smoking, alcohol, activity) showed weak correlation with the target in this dataset.
 - The model's precision is higher than its recall, meaning it misses more true disease cases than it
   falsely flags — a meaningful limitation in a medical screening context.
+
+## Team
+
+- Raghad Alharbi
+- Maram Alzahrani
+- Turki Abuhaimed
+- Mohammed Alshatri
